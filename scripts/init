@@ -1,0 +1,2 @@
+#!/bin/bash
+LD_LIBRARY_PATH="/opt/teamspeak" /opt/teamspeak/ts3server_linux_amd64 dbsqlpath=/opt/teamspeak/sql/ licensepath=/ts logpath=/ts/log
