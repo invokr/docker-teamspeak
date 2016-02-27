@@ -9,7 +9,7 @@ ENV tsv=3.0.12.2
 RUN yum update -y && yum upgrade -y && yum install wget -y && yum clean all
 
 # Install teamspeak
-ADD http://dl.4players.de/ts/releases/${tsv}/teamspeak3-server_linux-amd64-${tsv}.tar.gz ./
+ADD http://dl.4players.de/ts/releases/${tsv}/teamspeak3-server_linux_amd64-${tsv}.tar.bz2 ./
 RUN tar zxf teamspeak3-server_linux-amd64-${tsv}.tar.gz \
  && mv teamspeak3-server_linux-amd64 /opt/teamspeak \
  && rm teamspeak3-server_linux-amd64-${tsv}.tar.gz \
