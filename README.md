@@ -3,6 +3,7 @@ Docker Teamspeak
 
 ![](https://badge.imagelayers.io/invokr/teamspeak:latest.svg)
 ![](https://img.shields.io/docker/pulls/invokr/teamspeak.svg)
+[![Build Status](https://travis-ci.org/invokr/docker-teamspeak.svg?branch=master)](https://travis-ci.org/invokr/docker-teamspeak)
 
 This containers Dockerfile is loosely based on other Teamspeak containers with the
 following advantages:
