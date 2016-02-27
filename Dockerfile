@@ -3,7 +3,7 @@ FROM centos:7
 MAINTAINER Robin Dietrich <me@invokr.org>
 
 # Teamspeak version to download
-ENV tsv=3.0.11.4
+ENV tsv=3.0.12.2
 
 # Upgrade base system
 RUN yum update -y && yum upgrade -y && yum install wget -y && yum clean all
