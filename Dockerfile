@@ -6,13 +6,13 @@ MAINTAINER Robin Dietrich <me@invokr.org>
 ENV tsv=3.0.12.2
 
 # Upgrade base system
-RUN yum update -y && yum upgrade -y && yum install wget -y && yum clean all
+RUN yum update -y && yum upgrade -y && yum install bzip2 wget -y && yum clean all
 
 # Install teamspeak
 ADD http://dl.4players.de/ts/releases/${tsv}/teamspeak3-server_linux_amd64-${tsv}.tar.bz2 ./
-RUN tar zxf teamspeak3-server_linux-amd64-${tsv}.tar.gz \
- && mv teamspeak3-server_linux-amd64 /opt/teamspeak \
- && rm teamspeak3-server_linux-amd64-${tsv}.tar.gz \
+RUN tar xf teamspeak3-server_linux_amd64-${tsv}.tar.bz2 \
+ && mv teamspeak3-server_linux_amd64 /opt/teamspeak \
+ && rm teamspeak3-server_linux_amd64-${tsv}.tar.bz2 \
  && useradd -s /sbin/nologin teamspeak \
  && mkdir -p /ts/log \
  && chown -R teamspeak:teamspeak /opt/teamspeak /ts
