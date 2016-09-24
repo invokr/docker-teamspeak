@@ -15,4 +15,4 @@ Running the container
 ----------------------
 
     docker pull invokr/teamspeak
-    docker run -name ts3 -d -p 9987:9987/udp -p 30033:30033 -p 10011:10011 -v ts3data:/ts invokr/teamspeak
+    docker run -d -p 9987:9987/udp -p 30033:30033 -p 10011:10011 -v ts3data:/ts invokr/teamspeak
