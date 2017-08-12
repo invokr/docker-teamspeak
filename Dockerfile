@@ -3,16 +3,15 @@ FROM centos:7
 MAINTAINER Robin Dietrich <me@invokr.org>
 
 # Teamspeak version to download
-ENV tsv=3.0.13.4
+ENV tsv=3.0.13.8
 
 # Upgrade base system
 RUN yum update -y && yum upgrade -y && yum install bzip2 wget -y && yum clean all
 
 # Install teamspeak
 ADD http://dl.4players.de/ts/releases/${tsv}/teamspeak3-server_linux_amd64-${tsv}.tar.bz2 ./
-RUN tar xf teamspeak3-server_linux_amd64-${tsv}.tar.bz2 \
- && mv teamspeak3-server_linux_amd64 /opt/teamspeak \
- && rm teamspeak3-server_linux_amd64-${tsv}.tar.bz2 \
+
+RUN mv teamspeak3-server_linux_amd64 /opt/teamspeak \
  && useradd -s /sbin/nologin teamspeak \
  && mkdir -p /ts/log \
  && chown -R teamspeak:teamspeak /opt/teamspeak /ts
